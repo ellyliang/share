@@ -1,9 +1,15 @@
 /*global __dirname process*/
 const path = require('path');
+const views = require('koa-views');
 const koaBody = require('koa-body');
 const routes = require('../router');
 
-module.exports = function (app:any, config:object) {
+module.exports = function (app:any, config:any) {
+    // 加载模板引擎
+    app.use(views(config.template.path, {
+        extension: 'ejs'
+    }));
+
     //解析body
     app.use(koaBody({
         multipart: true,

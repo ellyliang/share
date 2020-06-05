@@ -1,1 +1,0 @@
-{"version":3,"file":"production.js","sourceRoot":"","sources":["../../server/config/production.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,GAAG;IACb,MAAM,EAAE;QACJ,IAAI,EAAE,MAAM;KACf;IACD,GAAG,EAAE;QACD,IAAI,EAAE,OAAO;KAChB;CACJ,CAAC"}

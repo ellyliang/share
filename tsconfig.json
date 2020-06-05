@@ -1,60 +1,66 @@
-// {
-//     "compilerOptions": {
-//         "module": "commonjs",
-//         "target": "es2017",
-//         "noImplicitAny": true,
-//         "moduleResolution": "node",
-//         "sourceMap": true,
-//         "outDir": "static",  // TS文件编译后会放入到此文件夹内
-//         "baseUrl": ".",
-//         "paths": {
-//             "*": [
-//                 "node_modules/*",
-//                 "src/types/*"
-//             ]
-//         }
-//     },
-//     "include": [
-//         "server/**/*"
-//     ]
-// }
-
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "esnext",
-        "strict": true,
-        "jsx": "preserve",
-        "importHelpers": true,
+        "module": "commonjs",
+        "target": "es2017",
+        "noImplicitAny": true,
         "moduleResolution": "node",
-        "experimentalDecorators": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
         "sourceMap": true,
-        "baseUrl": ".",
-        "types": [
-            "webpack-env"
-        ],
-        "paths": {
-            "@/*": [
-                "src/*",
-                "node_modules/*"
-            ]
-        },
-        "lib": [
-            "esnext",
-            "dom",
-            "dom.iterable",
-            "scripthost"
+        "outDir": "static",  // TS文件编译后会放入到此文件夹内
+        "baseUrl": "."
+    },
+    "paths": {
+        "@/*": [
+            "./client/src/*",
+            "node_modules/*"
         ]
     },
-    "include": [
-        "server/**/*",
-        "./client/src/**/*.ts",
-        "./client/src/**/*.tsx",
-        "./client/src/**/*.vue"
+    "typeRoots": [
+        "./client/src",
+        "./node_modules/vue/types"
     ],
-    "exclude": [
-        "node_modules"
+    "files": [
+        "./client/src/vue-shims.d.ts"
+    ],
+    "include": [
+        "server/**/*"
     ]
 }
+
+// {
+//     "compilerOptions": {
+//         "target": "es5",
+//         "module": "es6",
+//         "importHelpers": true,
+//         "moduleResolution": "node",
+//         "experimentalDecorators": true,
+//         "esModuleInterop": true,
+//         "allowSyntheticDefaultImports": true,
+//         "sourceMap": true,
+//         "baseUrl": "./client",
+//         "outDir": "./static", // TS文件编译后会放入到此文件夹内
+//         "types": [
+//             "webpack-env"
+//         ],
+//         "paths": {
+//             "@/*": [
+//                 "./client/src/*",
+//                 "node_modules/*"
+//             ]
+//         },
+//         "lib": [
+//             "esnext",
+//             "dom",
+//             "dom.iterable",
+//             "scripthost"
+//         ]
+//     },
+//     "include": [
+//         "./server/**/*",
+//         "./client/src/**/*.ts",
+//         "./client/src/**/*.tsx",
+//         "./client/src/**/*.vue"
+//     ],
+//     "exclude": [
+//         "node_modules"
+//     ]
+// }
