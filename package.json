@@ -4,8 +4,8 @@
   "description": "share",
   "main": "index.js",
   "scripts": {
-    "server": "tsc && node static/server.js",
-    "watch-server": "nodemon --watch 'server/**/*' -e ts,tsx --exec 'ts-node' ./server/server.ts",
+    "server": "tsc && node static/server/server.js",
+    "watch-server": "nodemon --watch 'server/**' -e ts,tsx --exec 'ts-node' ./server/server.ts",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -46,6 +46,7 @@
     "koa": "^2.12.0",
     "koa-body": "^4.1.3",
     "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
     "koa-views": "^6.2.3",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",

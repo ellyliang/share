@@ -18,18 +18,19 @@
 }
 
 
-h3[data-v-0318f9f8] {
+h3 {
   margin: 40px 0 0;
+  color: red;
 }
-ul[data-v-0318f9f8] {
+ul {
   list-style-type: none;
   padding: 0;
 }
-li[data-v-0318f9f8] {
+li {
   display: inline-block;
   margin: 0 10px;
 }
-a[data-v-0318f9f8] {
+a {
   color: #42b983;
 }
 

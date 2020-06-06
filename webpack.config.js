@@ -15,12 +15,18 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                use: [
+                    "babel-loader",
+                    {
+                        loader: "ts-loader",
+                        options: { appendTsxSuffixTo: [/\.vue$/] }
+                    }
+                ]
             },
             {
                 test: /\.vue$/,
-                include: [path.join(__dirname, './client/')],
+                include: [path.join(__dirname, './client/src')],
                 loader: 'vue-loader',
                 options: {
                     extractCSS: true
@@ -51,7 +57,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.js', '.vue', '.json', '.ts'],
         alias: {
             '@': require('path').resolve(__dirname, './client/src')
         }
@@ -63,7 +69,7 @@ module.exports = {
     output: {
         filename: '[name].js?v=[hash]',
         path: path.resolve(__dirname, './static/dist'),
-        publicPath: './static/dist/'
+        publicPath: './dist/'
     },
     plugins: [
         new CleanWebpackPlugin({

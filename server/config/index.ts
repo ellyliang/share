@@ -4,6 +4,10 @@ class ModuleConfig {
     public readonly template = {
         path: 'server/views'
     };
+    public readonly staticDir = {
+        root: 'static',
+        options: {}
+    };
 }
 
 module.exports = new ModuleConfig();

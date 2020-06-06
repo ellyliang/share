@@ -1,5 +1,8 @@
 exports.render = async (ctx:any) => {
-    await ctx.render('index');
+    console.log('1223');
+    await ctx.render('index', {
+        title: 'demo title'
+    });
 };
 
 exports.demo = async (ctx:any) => {
